@@ -3,7 +3,7 @@ package com.romanstetsiuk.quiz_web_app;
 import javax.persistence.*;
 
 @Entity
-public class Questions {
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,13 +11,13 @@ public class Questions {
     private String question;
 
     @ManyToOne
-    QuestionsType questionsType;
+    QuestionType questionsType;
 
-    public Questions(String question) {
+    public Question(String question) {
         this.question = question;
     }
 
-    public Questions() {
+    public Question() {
     }
 
     public Long getId() {
@@ -38,7 +38,7 @@ public class Questions {
 
     @Override
     public String toString() {
-        return "Questions{" +
+        return "Question{" +
                 "id=" + id +
                 ", question='" + question + '\'' +
                 '}';

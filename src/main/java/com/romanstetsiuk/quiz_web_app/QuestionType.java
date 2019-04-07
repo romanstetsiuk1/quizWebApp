@@ -4,14 +4,15 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class QuestionsType {
+public class QuestionType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  long id;
+    private long id;
+    private String kategory;
 
     @OneToMany
-    List<Questions> questionsList;
+    List<Question> questionList;
 
 
 }
